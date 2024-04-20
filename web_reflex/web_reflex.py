@@ -3,6 +3,7 @@ import web_reflex.styles.styles as styles
 from .components.footer import footer
 from .components.navbar import navbar
 from .views.headers.headers import header
+from web_reflex.styles.styles  import Size as size
 from .views.links.links import links
 
 
@@ -17,9 +18,11 @@ def index() -> rx.Component:
                 rx.chakra.vstack(   
                     header(),
                     links(),
-                    max_width=styles.MAX_WITDTH,
+                    links(),
+                    links(),
+                    max_width = styles.MAX_WITDTH,
                     width="100%",
-                    margin_y=styles.Spacer.BIG,
+                    margin_y = size.BIG.value,
                 ), 
             ),
             footer(),

@@ -1,15 +1,15 @@
 import reflex as rx
+from web_reflex.styles.styles  import Size as size
 
 def navbar() -> rx.Component:
-    return rx.chakra.hstack(
+    return rx.hstack(
         rx.text(
             "TheScientific",
-            color ='white',
-            height="50px",
         ),
-        positions="sticky",
-        bg="Blue",
-        padding_x="16px",
-        padding_y="8px",
+        position = "sticky",
+        bg="lightgray",
+        padding_x=size.DEFAULT.value,
+        padding_y=size.SMALL.value,
         z_index="999",
+        top = "0",
     )
