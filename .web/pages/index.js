@@ -2,39 +2,60 @@
 
 
 import { Fragment } from "react"
-import { Button as RadixThemesButton, Flex as RadixThemesFlex, Link as RadixThemesLink, Text as RadixThemesText } from "@radix-ui/themes"
-import { Avatar } from "@chakra-ui/react"
+import { Box as RadixThemesBox, Flex as RadixThemesFlex, Link as RadixThemesLink, Text as RadixThemesText } from "@radix-ui/themes"
+import { Avatar, Button, HStack, VStack } from "@chakra-ui/react"
 import { isTrue } from "/utils/state"
 import NextLink from "next/link"
+import { LinkIcon as LucideLinkIcon } from "lucide-react"
 import NextHead from "next/head"
 
 
 
-export function Link_5919eef53b9c64c51379d61eda404eb0 () {
+export function Link_83137a5174dca28cd342143aba72fa24 () {
 
 
 
   return (
-    <RadixThemesLink asChild={true} target={isTrue(true) ? `_blank` : ``}>
+    <RadixThemesLink asChild={true} css={{"width": "100%"}} target={isTrue(true) ? `_blank` : ``}>
   <NextLink href={`https://github.com/andreselcientifico`} passHref={true}>
-  <RadixThemesButton>
+  <Button sx={{"width": "100%", "height": "100%"}}>
+  <HStack>
+  <LucideLinkIcon css={{"color": "var(--current-color)"}}/>
+  <VStack>
+  <RadixThemesText as={`p`}>
   {`Github`}
-</RadixThemesButton>
+</RadixThemesText>
+  <RadixThemesText as={`p`}>
+  {`Github`}
+</RadixThemesText>
+</VStack>
+</HStack>
+</Button>
 </NextLink>
 </RadixThemesLink>
   )
 }
 
-export function Link_0cb7bdbd4b9a5fb989cc933f2e47e83e () {
+export function Link_7a5da96b8b0095ff9f359ca73931b635 () {
 
 
 
   return (
-    <RadixThemesLink asChild={true} target={isTrue(true) ? `_blank` : ``}>
+    <RadixThemesLink asChild={true} css={{"width": "100%"}} target={isTrue(true) ? `_blank` : ``}>
   <NextLink href={`https://www.linkedin.com/in/andres-alfonso-569409128/`} passHref={true}>
-  <RadixThemesButton>
+  <Button sx={{"width": "100%", "height": "100%"}}>
+  <HStack>
+  <LucideLinkIcon css={{"color": "var(--current-color)"}}/>
+  <VStack>
+  <RadixThemesText as={`p`}>
   {`linkedin`}
-</RadixThemesButton>
+</RadixThemesText>
+  <RadixThemesText as={`p`}>
+  {`linkedin`}
+</RadixThemesText>
+</VStack>
+</HStack>
+</Button>
 </NextLink>
 </RadixThemesLink>
   )
@@ -44,13 +65,15 @@ export default function Component() {
 
   return (
     <Fragment>
-  <RadixThemesFlex align={`center`} direction={`column`} gap={`2`}>
-  <RadixThemesFlex align={`start`} css={{"positions": "sticky", "background": "Blue", "paddingInlineStart": "16px", "paddingInlineEnd": "16px", "paddingTop": "8px", "paddingBottom": "8px", "zIndex": "999"}} direction={`row`} gap={`2`}>
+  <RadixThemesBox>
+  <HStack sx={{"positions": "sticky", "background": "Blue", "paddingInlineStart": "16px", "paddingInlineEnd": "16px", "paddingTop": "8px", "paddingBottom": "8px", "zIndex": "999"}}>
   <RadixThemesText as={`p`} css={{"color": "white", "height": "50px"}}>
   {`TheScientific`}
 </RadixThemesText>
-</RadixThemesFlex>
-  <RadixThemesFlex align={`center`} direction={`column`} gap={`2`}>
+</HStack>
+  <RadixThemesFlex css={{"display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+  <VStack sx={{"maxWidth": "560px", "width": "100%", "marginTop": "2em", "marginBottom": "2em"}}>
+  <VStack>
   <Avatar name={`Andres Perez`} size={`xl`}/>
   <RadixThemesText as={`p`} color={`gray`}>
   {`@TheScientific`}
@@ -63,18 +86,20 @@ export default function Component() {
                 Actualmente trabajo como freelance fullstack developer.
                 !Bienvenid@!`}
 </RadixThemesText>
+</VStack>
+  <VStack>
+  <Link_83137a5174dca28cd342143aba72fa24/>
+  <Link_7a5da96b8b0095ff9f359ca73931b635/>
+</VStack>
+</VStack>
 </RadixThemesFlex>
-  <RadixThemesFlex align={`start`} direction={`column`} gap={`2`}>
-  <Link_5919eef53b9c64c51379d61eda404eb0/>
-  <Link_0cb7bdbd4b9a5fb989cc933f2e47e83e/>
-</RadixThemesFlex>
-  <RadixThemesFlex align={`center`} direction={`column`} gap={`2`}>
+  <VStack sx={{"align": "center"}}>
   <img src={`favicon.ico`}/>
   <RadixThemesLink>
   {`© 2022-2024 by Andres Perez, with help and thanks to MoureDev.`}
 </RadixThemesLink>
-</RadixThemesFlex>
-</RadixThemesFlex>
+</VStack>
+</RadixThemesBox>
   <NextHead>
   <title>
   {`Web Reflex | Index`}
