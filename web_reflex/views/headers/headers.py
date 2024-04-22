@@ -2,6 +2,8 @@ import reflex as rx
 from web_reflex.components.icon import icon
 from web_reflex.components.info_text import info_text
 from web_reflex.styles.styles import Size as size
+from web_reflex.styles.colors import *
+from web_reflex.Constans import *
 
 def header() -> rx.Component:
     return rx.chakra.vstack(
@@ -10,12 +12,13 @@ def header() -> rx.Component:
             rx.chakra.vstack(
                 rx.chakra.heading(
                     'ANDRES PEREZ',
-                    color='gray', 
+                    color= TextColor.HEADER.value, 
                     size= "lg"
                 ),
                 rx.text(
                     '@TheScientific',
                     margin_top="0px !important",
+                    color = TextColor.BODY.value,
                 ),
                 rx.chakra.hstack(
                     icon("https://github.com/andreselcientifico"),
@@ -43,9 +46,11 @@ def header() -> rx.Component:
             ),
             width="100%",
         ),
-        rx.text('''Soy desarrollador de software desde hace 2 años.
+        rx.text(f'''Soy desarrollador de software desde hace {EXPERIENCIA_LINK} años.
                 Actualmente trabajo como freelance fullstack developer.
-                !Bienvenid@!'''),
+                !Bienvenid@!''',
+                color = TextColor.BODY.value,
+                ),
         spacing=size.BIG.value,
         align_items='start',
     )

@@ -12,20 +12,19 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    return rx.box(
+    return rx.chakra.box(
             navbar(),
-            rx.center(
+            rx.chakra.center(
                 rx.chakra.vstack(   
                     header(),
                     links(),
-                    links(),
-                    links(),
-                    max_width = styles.MAX_WITDTH,
+                    max_width = styles.MAX_WIDTH,
                     width="100%",
                     margin_y = size.BIG.value,
                 ), 
             ),
             footer(),
+            position = 'relative'
         )
             
 app = rx.App(

@@ -1,6 +1,7 @@
 import reflex as rx
 import datetime
 from web_reflex.styles.styles import Size as size
+from web_reflex.styles.colors import *
 
 
 def footer() -> rx.Component:
@@ -18,4 +19,7 @@ def footer() -> rx.Component:
                 margin_top = "0px !important",
             ),
         margin_bottom = size.BIG.value,
+        padding_bottom = size.BIG.value,
+        bottom = 0,
+        color = TextColor.FOOTER.value,
     )
