@@ -1,15 +1,25 @@
 import reflex as rx
 from web_reflex.styles.styles  import Size as size
+import web_reflex.styles.styles  as styles
+from web_reflex.styles.colors import *
 
 def navbar() -> rx.Component:
     return rx.hstack(
-        rx.text(
-            "TheScientific",
+        rx.chakra.box(
+            rx.chakra.span(
+                "TheScien",
+                color = Color.PRIMARY.value,
+            ),
+            rx.chakra.span(
+                "tific",
+                color = Color.SECONDARY.value,
+            ),
+            style= styles.navbar_title_style,
         ),
         position = "sticky",
-        bg="lightgray",
-        padding_x=size.DEFAULT.value,
-        padding_y=size.SMALL.value,
+        bg=Color.CONTENT.value,
+        padding_x=size.BIG.value,
+        padding_y=size.DEFAULT.value,
         z_index="999",
         top = "0",
     )

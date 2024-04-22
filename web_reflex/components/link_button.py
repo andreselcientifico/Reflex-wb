@@ -1,5 +1,6 @@
 import reflex as rx
-import web_reflex.styles.styles as styles
+from web_reflex.styles.styles import Size as size
+import web_reflex.styles.styles  as styles
 
 def link_button(title:str, body : str, url: str) -> rx.Component:
     return rx.link(
@@ -7,13 +8,16 @@ def link_button(title:str, body : str, url: str) -> rx.Component:
             rx.chakra.hstack(
                 rx.icon(
                     "link",
-                    width= styles.Size.BIG.value,
-                    height= styles.Size.DEFAULT.value,
+                    width= size.BIG.value,
+                    height= size.DEFAULT.value,
+                    margin= size.MEDIUM.value,
                     ),
                 rx.chakra.vstack(
                     rx.text(title, style=styles.button_title_style),
                     rx.text(body, style=styles.button_body_style),
-                    align_items= 'start'
+                    spacing= size.SMALL.value,
+                    align_items= 'start',
+                    margin= size.ZERO.value,
                 ),
             ),
         ),

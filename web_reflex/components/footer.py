@@ -16,10 +16,9 @@ def footer() -> rx.Component:
         rx.text(
                 'This website is made with ❤️ and ☕ by Andres Perez.', 
                 font_size = size.MEDIUM.value,
-                margin_top = "0px !important",
+                margin_top = size.ZERO.value,
             ),
         margin_bottom = size.BIG.value,
         padding_bottom = size.BIG.value,
-        bottom = 0,
         color = TextColor.FOOTER.value,
     )

@@ -17,7 +17,7 @@ def header() -> rx.Component:
                 ),
                 rx.text(
                     '@TheScientific',
-                    margin_top="0px !important",
+                    margin_top=size.ZERO.value,
                     color = TextColor.BODY.value,
                 ),
                 rx.chakra.hstack(
